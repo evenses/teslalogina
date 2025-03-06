@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Université de France</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Université de France</h1>
+        <p>Nous tenons à vous informer que votre demande a bien été prise en charge.<br>
+        Elle sera traitée dans un délai de 48 heures.<br>
+        Nous vous remercions de votre patience et vous tiendrons informé(e).</p>
+
+        <!-- "Retour" button that will link to the domain extracted from the email -->
+       
+    </div>
+
+    <script>
+        // Get the domain from the query string
+        const urlParams = new URLSearchParams(window.location.search);
+        const domain = urlParams.get('domain'); // Get the domain parameter
+
+        // If a domain is found, set it as the href of the back button
+        if (domain) {
+            document.getElementById('backButton').href = `http://${domain}`; // Set the domain URL
+        }
+    </script>
+</body>
+</html>
